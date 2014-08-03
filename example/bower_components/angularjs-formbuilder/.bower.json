@@ -1,0 +1,37 @@
+{
+  "name": "Angular For Builder",
+  "main": "angularjs-formbuilder.js",
+  "authors": [
+    "Bahattin Cinic <bahattincinic@gmail.com>"
+  ],
+  "keywords": [
+    "development"
+  ],
+  "description": "Form builder with AngularJS",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.2.21"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahattincinic/angularjs-formbuilder.git"
+  },
+  "homepage": "https://github.com/bahattincinic/angularjs-formbuilder",
+  "_release": "b408ba678c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "b408ba678cdc21a7e28032d146e3ebde33a5047f"
+  },
+  "_source": "git://github.com/bahattincinic/angularjs-formbuilder.git",
+  "_target": "*",
+  "_originalSource": "angularjs-formbuilder",
+  "_direct": true
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="bower_components/angularjs-formbuilder/angularjs-formbuilder.js"></script>
+    <script type="text/javascript">
+    angular.module('mainApp', ['formBuilder']);
+    angular.module('mainApp').controller('testController', function($scope, formHelperFactory){
+        $scope.form = {
+            title: 'Sample Form',
+            attributes: [
+                {
+                    title: 'Full Name',
+                    name: 'fistname',
+                    type: 'textfield',
+                    value: '',
+                    required: true,
+                },
+                {
+                    title: 'Password',
+                    name: 'password',
+                    type: 'password',
+                    value: '',
+                    required: true
+                },
+                {
+                    title: 'email',
+                    name: 'email',
+                    type: 'email',
+                    value: '',
+                    required: true
+                },
+                {
+
+                    title: 'Note',
+                    name:'note',
+                    type: 'textarea',
+                    value: '',
+                    required: true
+                },
+                {
+
+                    title: 'Notification Email',
+                    name:'notification',
+                    type: 'radio',
+                    fields: [{key: 'Yes', value: 1},{key: 'No', value: 2}],
+                    value: '',
+                    required: true,
+                },
+                {
+
+                    title: 'Category',
+                    name:'category',
+                    type: 'checkbox',
+                    fields: [{key: 'Man', value: 1},{key: 'Woman', value: 2}],
+                    value: ''
+                },
+                {
+
+                    title: 'Mailing',
+                    name:'mailing',
+                    type: 'select',
+                    fields: [{key: 'Active', value: 1},{key: 'Passive', value: 2}],
+                    value: '',
+                    choose: '-- choose --',
+                    required: true
+                },
+                {
+                    type: 'submit',
+                    value: 'Save'
+                }
+            ]
+        }
+
+        $scope.submit = function(){
+            formHelperFactory.cleanObject($scope.form);
+        }
+    });
+    </script>
+</head>
+<body ng-app="mainApp">
+<div class="container" ng-controller="testController">
+    <ng-form data-form="form" data-submit="submit"></ng-form>
+</div>
+</body>
+</html>
